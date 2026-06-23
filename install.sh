@@ -18,11 +18,12 @@ link() {
   fi
 
   if [[ -e "$dst" ]]; then
-    mkdir -p "$BACKUP_DIR"
-    mv "$dst" "$BACKUP_DIR/"
+    mkdir -p "$BACKUP_DIR/$(dirname "$1")"
+    mv "$dst" "$BACKUP_DIR/$1"
     echo "  backup $dst -> $BACKUP_DIR/$1"
   fi
 
+  mkdir -p "$(dirname "$dst")"
   ln -s "$src" "$dst"
   echo "  link  $dst -> $src"
 }
@@ -34,7 +35,7 @@ echo "==> Installing dotfiles from $DOTFILES_DIR"
 #   link .gitconfig
 #   link .claude
 
-# Claude Code config
-[[ -d "$DOTFILES_DIR/.claude" ]] && link .claude
+# Claude Code
+link .claude/settings.json
 
 echo "==> Done."

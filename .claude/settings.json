@@ -1,0 +1,11 @@
+{
+  "voiceEnabled": true,
+  "extraKnownMarketplaces": {
+    "sosafe-claude-market": {
+      "source": {
+        "source": "github",
+        "repo": "sosafe-platform-engineering/dev-ai-claude-marketplace"
+      }
+    }
+  }
+}
