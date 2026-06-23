@@ -1,0 +1,11 @@
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Secrets — never commit these
+.env
+.env.*
+*_token
+*_secret
+secrets/
