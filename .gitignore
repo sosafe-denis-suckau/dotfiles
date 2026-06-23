@@ -9,3 +9,19 @@
 *_token
 *_secret
 secrets/
+
+# Shell secrets file (source this from .zshrc/.bashrc instead of inline exports)
+.secrets
+
+# Claude Code — local overrides may contain MCP tokens or API keys
+.claude/settings.local.json
+
+# SSH — private keys must never be tracked
+.ssh/
+
+# Tool credential files
+.aws/credentials
+.kube/config
+.npmrc
+.pypirc
+.netrc
