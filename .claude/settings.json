@@ -1,5 +1,8 @@
 {
   "model": "Sonnet",
+  "enabledPlugins": {
+    "sosafe-security@sosafe-claude-market": true
+  },
   "extraKnownMarketplaces": {
     "sosafe-claude-market": {
       "source": {
@@ -9,7 +12,10 @@
     }
   },
   "voiceEnabled": true,
-  "enabledPlugins": {
-    "sosafe-security@sosafe-claude-market": true
+  "permissions": {
+    "allow": [
+      "Bash(git *)"
+    ],
+    "blockReadsOutsideWorkingDirectories": true
   }
 }
