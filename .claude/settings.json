@@ -1,5 +1,5 @@
 {
-  "voiceEnabled": true,
+  "model": "Sonnet",
   "extraKnownMarketplaces": {
     "sosafe-claude-market": {
       "source": {
@@ -7,5 +7,9 @@
         "repo": "sosafe-platform-engineering/dev-ai-claude-marketplace"
       }
     }
+  },
+  "voiceEnabled": true,
+  "enabledPlugins": {
+    "sosafe-security@sosafe-claude-market": true
   }
 }
